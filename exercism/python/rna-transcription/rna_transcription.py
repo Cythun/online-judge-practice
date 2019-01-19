@@ -1,2 +1,13 @@
 def to_rna(dna_strand):
-    pass
+    translator = {
+        'C': 'G',
+        'G': 'C',
+        'T': 'A',
+        'A': 'U'
+    }
+    result = ''
+    
+    for letter in dna_strand:
+        result += translator[letter]
+
+    return result
